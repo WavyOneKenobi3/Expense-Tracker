@@ -1,9 +1,3 @@
-#Table with title of rows
-
-#row with names of expenses(string), row for interger(number), total for all expenses (number add together)
-
-  #expense tracker
-
 # An app that tracks and categorizes expenses, storing data in a CSV or SQLite database.
 # Skills: File handling or databases, data analysis
 
@@ -12,7 +6,7 @@ list_expense = {}
 
 def add_expense():
   key = input("Enter your expense here. ").lower()
-  value = input("Amount of the expense")
+  value = input("Amount of the expense ")
   list_expense.update({key: value})
   
   
