@@ -12,7 +12,7 @@ Class ExpenseManager:
     self.list_expenses.append(Expense(self, amount, category, date))
   
   
-def Delete_expense():
+def delete_expense(self):
   delete_bill = input("which expense do you want to delete? ").lower()
   if delete_bill in list_expense:
     del list_expense[delete_bill]
