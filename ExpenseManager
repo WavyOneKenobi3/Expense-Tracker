@@ -1,3 +1,5 @@
+from Expenses import Expense
+
 #manage class
 #Adds, removes, lists, analyzes expenses
 Class ExpenseManager:              
@@ -5,12 +7,9 @@ Class ExpenseManager:
     self.list_expenses = []
 
 
+#method
   def add_expense(self, amount, category, date):
-    key = input("Enter your expense here. ").lower()
-    value = input("Amount of the expense ")
-    self.list_expense.append()
-  
-  
+    self.list_expenses.append(Expense(self, amount, category, date))
   
   
 def Delete_expense():
