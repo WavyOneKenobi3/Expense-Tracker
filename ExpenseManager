@@ -1,0 +1,21 @@
+#manage class
+#Adds, removes, lists, analyzes expenses
+Class ExpenseManager:              
+  def __init__(self):
+    self.list_expenses = []
+
+
+  def add_expense(self, amount, category, date):
+    key = input("Enter your expense here. ").lower()
+    value = input("Amount of the expense ")
+    self.list_expense.append()
+  
+  
+  
+  
+def Delete_expense():
+  delete_bill = input("which expense do you want to delete? ").lower()
+  if delete_bill in list_expense:
+    del list_expense[delete_bill]
+  else:
+    print("Expense not found")
