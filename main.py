@@ -1,20 +1,12 @@
-list_expense = {}
+#Expenses class
+Class Expense:
+  def __init__(self, amount, category, date):
+    self.amount = amount
+    self.category = category
+    self.date = date
 
 
-def add_expense():
-  key = input("Enter your expense here. ").lower()
-  value = input("Amount of the expense ")
-  list_expense.update({key: value})
-  
-  
-  
-  
-def Delete_expense():
-  delete_bill = input("which expense do you want to delete? ").lower()
-  if delete_bill in list_expense:
-    del list_expense[delete_bill]
-  else:
-    print("Expense not found")
+
     
     
 while True:
