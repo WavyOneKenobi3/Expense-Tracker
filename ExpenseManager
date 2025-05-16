@@ -1,17 +1,19 @@
 from Expenses import Expense
 
-#manage class
-#Adds, removes, lists, analyzes expenses
-Class ExpenseManager:              
+# ExpenseManager class to manage expense
+class ExpenseManager:              
   def __init__(self):
     self.list_expenses = []
 
 
-#method
-  def add_expense(self, amount, category, date):
+  #Method to add an expense
+  def add_expense(self):
+   # Asking user for input
     date = input(f'What is the date for the expense?')    
-    amount = input(f'What is the amount of the expense?')
+    amount = float(input(f'What is the amount of the expense?'))
     category = input(f'What is the name of the expense? ')
+
+    expense = Expense(category, )
     return self.list_expenses.append(Expense(self, amount, category, date))
   
   
