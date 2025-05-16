@@ -1,8 +1,8 @@
 #Expenses class
 Class Expense:
-  def __init__(self, amount, category, date):
-    self.amount = amount
+  def __init__(self, category, amount, date):
     self.category = category
+    self.amount = amount
     self.date = date
 
 
