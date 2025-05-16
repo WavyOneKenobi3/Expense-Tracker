@@ -9,12 +9,15 @@ Class ExpenseManager:
 
 #method
   def add_expense(self, amount, category, date):
-    self.list_expenses.append(Expense(self, amount, category, date))
+    date = input(f'What is the date for the expense?')    
+    amount = input(f'What is the amount of the expense?')
+    category = input(f'What is the name of the expense? ')
+    return self.list_expenses.append(Expense(self, amount, category, date))
   
   
 def delete_expense(self):
   delete_bill = input("which expense do you want to delete? ").lower()
-  if delete_bill in list_expense:
+  if delete_bill in list_expenses:
     del list_expense[delete_bill]
   else:
     print("Expense not found")
