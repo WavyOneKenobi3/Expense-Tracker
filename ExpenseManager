@@ -13,13 +13,34 @@ class ExpenseManager:
     amount = float(input(f'What is the amount of the expense?'))
     category = input(f'What is the name of the expense? ')
 
-    expense = Expense(category, )
-    return self.list_expenses.append(Expense(self, amount, category, date))
+    # Create an Expense object and append it to the list
+    new_expenses = Expense(category, amount, date)
+    self.list_expenses.append(new_expenses)
   
-  
-def delete_expense(self):
-  delete_bill = input("which expense do you want to delete? ").lower()
-  if delete_bill in list_expenses:
-    del list_expense[delete_bill]
-  else:
-    print("Expense not found")
+    print(f"Expense added: {amount} for {category} on {date}")
+
+
+  # Method to delete an expense
+    def delete_expense(self):
+        # Display all the expenses with an index
+        if not self.list_expenses:                                      #if self.list_expenses is empty
+            print("No expenses to delete.")
+            return                                                      #The return statement causes the function to exit at this point
+
+        print("Here are your expenses:")
+        for idx, expense in enumerate(self.list_expenses):                    #enumerate() returns two values for each item in the list: the index (idx) of the item and the item itself (expense).
+            print(f"{idx}. {expense}")  # Display each expense with an index
+
+        # Ask the user which expense they want to delete
+        try:
+            expense_index = int(input("Enter the index of the expense you want to delete: "))
+            
+            # Check if the index is valid
+            if 0 <= expense_index < len(self.list_expenses):
+                deleted_expense = self.list_expenses.pop(expense_index)  # Remove the expense
+                print(f"Expense deleted: {deleted_expense}")
+            else:
+                print("Invalid index. Please try again.")
+        except ValueError:
+            print("Invalid input. Please enter a valid index.")
+        
